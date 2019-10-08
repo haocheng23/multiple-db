@@ -1,0 +1,27 @@
+spring:
+  datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
+      username: root
+      password: 123456
+      # 监控统计拦截的filters 有stat,wall,log4j
+      filters: stat
+custom:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    names: ds1,ds2
+    ds1:
+      url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
+      username: root
+      password: 123456
+      filters: stat
+    ds2:
+      url: jdbc:mysql://localhost:3306/test2?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
+      username: root
+      password: 123456
+      filters: stat
+server:
+  port: 7777
+logging:
+  level:
+    com.hc.util.multiple.db: debug
