@@ -24,4 +24,9 @@ server:
   port: 7777
 logging:
   level:
-    com.hc.util.multiple.db: debug
+    com.hc.multiple.db: debug
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql

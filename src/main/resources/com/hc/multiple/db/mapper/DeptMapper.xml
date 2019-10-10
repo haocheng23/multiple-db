@@ -95,4 +95,11 @@
       <include refid="Example_Where_Clause" />
     </if>
   </select>
+
+  <!-- 分页查询，不需要写分页SQL，插件会拦截查询请求 -->
+  <select id="get4Page" resultMap="BaseResultMap">
+    SELECT
+        <include refid="Base_Column_List"/>
+    FROM dept
+  </select>
 </mapper>
