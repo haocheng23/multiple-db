@@ -3,6 +3,7 @@ package com.hc.multiple.db.dao;
 import com.hc.multiple.db.mapper.DeptMapper;
 import com.hc.multiple.db.model.Dept;
 import com.hc.multiple.db.model.DeptExample;
+import com.hc.multiple.db.util.paging.PageResult;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;

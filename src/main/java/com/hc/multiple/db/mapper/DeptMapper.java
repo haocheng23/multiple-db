@@ -3,6 +3,7 @@ package com.hc.multiple.db.mapper;
 import com.hc.multiple.db.model.Dept;
 import com.hc.multiple.db.model.DeptExample;
 import com.hc.multiple.db.util.paging.PageRequest;
+import com.hc.multiple.db.util.paging.PageResult;
 
 import java.util.List;
 

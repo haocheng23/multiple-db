@@ -11,25 +11,32 @@ import java.util.List;
  * @Date: 2019-10-10 15:50
  */
 @Data
-public class PageResult {
-    /**
-     * 当前页码
-     */
-    private int pageNum;
-    /**
-     * 每页数量
-     */
-    private int pageSize;
+public class PageResult<T> {
+
+//    当前页码
+//    private int pageNum;
+
+//    每页数量
+//    private int pageSize;
+
+//    页码总数
+//    private int totalPages;
+
     /**
      * 记录总数
      */
     private long totalSize;
     /**
-     * 页码总数
+     * 数据集
      */
-    private int totalPages;
-    /**
-     * 数据模型
-     */
-    private List<?> content;
+    private List<T> content;
+
+    public PageResult(){
+    }
+
+    public PageResult(Long totalSize, List<T> content) {
+        this.totalSize = totalSize;
+        this.content = content;
+    }
+
 }

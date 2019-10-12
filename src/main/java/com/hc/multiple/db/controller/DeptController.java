@@ -10,9 +10,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
-public class TestController {
+public class DeptController {
 
     @Resource
     private DeptService deptService;
@@ -35,7 +36,7 @@ public class TestController {
 
 
     @PostMapping("/get4Page")
-    public PageResult get4Page(@RequestBody PageRequest pageRequest){
+    public List<Dept> get4Page(@RequestBody PageRequest pageRequest){
         return deptService.get4Page(pageRequest);
     }
 }
